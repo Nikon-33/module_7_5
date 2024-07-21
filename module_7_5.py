@@ -27,8 +27,11 @@ for root, dirs, files in os.walk(dir_path):
         mod_time = os.path.getmtime(file_path)
         form_time = time.ctime(mod_time)
         size = os.path.getsize(file_path)
+        dir_name = os.path.dirname(file_path)
 
-        print(f'Файл: {file_path}')
+        print(f'Обнаружен файл: {file}')
+        print(f'Путь к файлу: {file_path}')
         print(f'Размер: {size} байт')
         print(f'Последнее изменение: {form_time}')
+        print(f'Родительская директория: {dir_name}')
         print('-' * 40)
